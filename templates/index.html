@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Distancias</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Inicio</th>
+                <th>Final</th>
+                <th>Formula</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row['tipo'] }}</td>
+                <td>{{ row['X'] }}</td>
+                <td>{{ row['Y'] }}</td>
+                <td>{{ row['distancia'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
