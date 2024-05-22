@@ -22,4 +22,18 @@ class Euclidiana:
         carros_ordenados = sorted(carros, key=lambda x: list(x.values())[0])
         motos_ordenadas = sorted(motos, key=lambda x: list(x.values())[0])
         return carros_ordenados, motos_ordenadas
-    
+
+euclidiana = Euclidiana()
+nuevo_dato = {'X': 135, 'Y': 1.3}
+
+# Llamas a la función calcular_distancias con el nuevo dato
+carros_ordenados, motos_ordenadas = euclidiana.calcular_distancias(nuevo_dato)
+
+# Imprimes los resultados
+print("Carros ordenados por distancia:")
+for carro in carros_ordenados:
+    print(carro)
+
+print("\nMotos ordenadas por distancia:")
+for moto in motos_ordenadas:
+    print(moto)
